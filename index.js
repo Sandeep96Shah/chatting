@@ -20,8 +20,6 @@ require('./config/passport_jwt');
 const chatServer = require('http').Server(app);
 const chatSockets = require('./config/chat_socket').chatSockets(chatServer);
 
-console.log(`chat server is listening on port 5000`);
-
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
