@@ -2,10 +2,10 @@
 * This application is build to connect perople.
 
 ## Deployed
-* [Click Here](https://baatkre.herokuapp.com/)
+* [Click Here](http://13.233.24.54:8000/)
 
 ## Functionality for the users:-
-* Can register and signin.
+* Can signup and signin.
 * Can search friends and to them.
 * Can select a friend to chat.
 * Can send emojis
@@ -14,6 +14,7 @@
 * Reactjs - FrontEnd
 * Nodsjs - BackEnd
 * mongoose - Database
+* socket.io - to send messages to user
 
 ## Local Setup
  * Clone the repo
