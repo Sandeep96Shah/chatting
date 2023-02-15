@@ -2,6 +2,8 @@ const express = require('express');
 const port = process.env.PORT || 8000;
 const app = express();
 const cors = require('cors');
+
+app.use(express.static('./build'));
 app.use(cors());
 app.use(function(req,res,next){
     res.header("Access-Control-Allow-Origin","*");
