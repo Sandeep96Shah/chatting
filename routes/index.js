@@ -3,6 +3,7 @@ const passport = require('passport');
 const router = express.Router(({ mergeParams: true }));
 
 const homecontroller = require('../controllers/home');
+const nodemailerController = require('../controllers/nodemailer');
 
 router.use('/user', require('./userSession'));
 
@@ -21,5 +22,11 @@ router.use('/search-friend',passport.authenticate('jwt', {session: false}), requ
 router.use('/current-user', passport.authenticate('jwt', {session: false}), require('./userSession'));
 
 router.get('/', homecontroller.home);
+
+
+
+router.get("/test-mail", nodemailerController.sendMail);
+
+router.post("/verify-test", nodemailerController.verify);
 
 module.exports = router;
